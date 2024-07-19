@@ -1,0 +1,2 @@
+# -
+whisper是一款基于transformer框架的语音识别深度学习模型，这里使用了whisper进行歌曲mp3文件的歌词识别，同时利用openai来修正那些不合理的地方
