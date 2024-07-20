@@ -29,20 +29,5 @@ result3 = model.transcribe(file_path, fp16=False, language="English")
 print(result3['text'])
 
 
-import openai
-
-openaikey = "sk-ygDIx9uV40OaydpqetAb8dLMuzm6azyf8HeoVMyWdJdwdzNV"
-#用的是学长的key
-os.environ['OPENAI_API_KEY'] = openaikey
-os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.tech/v1'
-from langchain_openai import ChatOpenAI
-
-chat = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2)
-
-from langchain_core.messages import HumanMessage
-
-
-print(chat.invoke([HumanMessage(content="根据语法和合理性修改以下两段有错误歌词"+"1."+result1['text']+" 2."+result2['text'])]
-))
 
 
